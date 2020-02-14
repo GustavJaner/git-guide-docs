@@ -40,6 +40,9 @@ $ git checkout <branch>         # Redirect HEAD to an existing branch
 $ git checkout <commitHash>     # Redirect HEAD to a specific commit - Detached HEAD state
 ```
 
+Before checking out/redirecting the HEAD pointer to another branch/commit:  
+If your working directory/staging area has uncommitted changes that conflict with the branch you’re checking out, Git won’t let you switch branches - `commit` or `stash` before proceeding.
+
 ## Add<span id="Add"></span>
 Stage files for commit
 ```
@@ -348,7 +351,3 @@ index.html |    2 +
 When the commit pointed to by the dev branch is **Not** directly ahead of the tip of master, Git has to make a three-way-merge (Recursive Strategy).  
 This is the case when the development history has diverged at some previous commit.  
 When the branch merged into master is not a direct ancestor of master, Git performs a three-way merge - using the two commits pointed to by the branch tips and the common ancestor commit.
-
-## Checkout a Branch<span id="Checkout a Branch"></span>
-Before checking out branches/redirecting the HEAD pointer to another branch/commit:  
-If your working directory/staging area has uncommitted changes that conflict with the branch you’re checking out, then Git won’t let you switch branches - `commit` or `stash` before checking out.
