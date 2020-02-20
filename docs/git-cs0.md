@@ -12,7 +12,7 @@ git push -u origin <newBranch>   # Push new branch with the commit
 ```
 git status                   # List changed files
 git add .                    # Add all changed files
-git commit -m “commit msg“   # Create a commit
+git commit -m “commitMsg“   # Create a commit
 git push                     # Push the commit to upstream branch
 ```
 
