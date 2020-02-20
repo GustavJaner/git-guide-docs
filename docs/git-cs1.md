@@ -19,8 +19,8 @@ git stash apply   # Resume the top/latest stash
 git reset HEAD            # Unstage all files
 git reset --hard HEAD     # Discard all changes
 
-git reset HEAD~n          # Reset   the n latest commits
-git reset --hard HEAD~n   # Discard the n latest commits
+git reset HEAD~n          # Reset   the n last commits
+git reset --hard HEAD~n   # Discard the n last commits
 ```
 
 ## Misc.
