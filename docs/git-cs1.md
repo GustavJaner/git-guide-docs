@@ -1,10 +1,10 @@
 ## Repository Information
 ```
 git status   # Info about current branch
+git branch   # List all local branches
 git log      # List all commits of current branch
 git show     # List the changes of the last commit
 git diff     # List the changes of unstaged files
-git branch   # List all local branches
 ```
 
 ## Stash

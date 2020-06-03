@@ -33,7 +33,7 @@ $ git branch -u origin/dev                  # Short command
 ## Checkout<span id="Checkout"></span>
 ```
 $ git checkout                  # Less detailed than $ git status
-$ git checkout -- <file>        # Discard(--hard) changes of an Unstaged file in working directory
+$ git checkout -- <file>        # Discard changes of an Unstaged file
 
 $ git checkout -b <newBranch>   # Create a new local branch and check out/redirect HEAD to it
 $ git checkout <branch>         # Redirect HEAD to an existing branch
@@ -216,15 +216,15 @@ _To rebase multiple commits into one: use **squash** on all commits except the o
 **Careful:** `reset --hard`  
 All local changes currently made will be **lost**. To undo a `reset`:
 ```
-$ git reset HEAD@{1}   # CANNOT though recover changes that were never previously Staged
+$ git reset HEAD@{1}    # CANNOT though recover changes that were never previously Staged
 ```
 
 ### Unstage Staged Files
 ```
-$ git reset HEAD <file>     # Unstage single file
-$ git reset HEAD            # Unstage all files
+$ git reset <file>    # Unstage single file
+$ git reset           # Unstage all files
 
-$ git reset --hard HEAD     # Discard all uncommitted changes on current branch
+$ git reset --hard    # Discard all uncommitted changes on current branch
 ```
 
 ### Uncommit Unpushed Commits
@@ -239,6 +239,12 @@ $ git reset --hard HEAD~n   # Reset the n most recent commits - Discarding the c
 Use any of the above `reset` commands and then force `push` to remove the commit from remote branch
 ```
 $ git push -f
+```
+
+## Restore<span id="Restore"></span>
+```
+$ git restore --staged <file>    # Unstage single file
+$ git restore <file>             # Discard changes of an Unstaged file
 ```
 
 ## Revert<span id="Revert"></span>
